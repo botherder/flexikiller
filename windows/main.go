@@ -146,7 +146,7 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("Do you want to uninstall it? (y/N) ")
 	choice, _ := reader.ReadString('\n')
-	if choice == "n" || choice == "" {
+	if choice != "y" {
 		return
 	}
 
