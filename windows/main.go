@@ -151,15 +151,6 @@ func main() {
 		return
 	}
 
-    scanner := bufio.NewScanner(file)
-    for scanner.Scan() {
-        fmt.Println(scanner.Text())
-    }
-
-    if err := scanner.Err(); err != nil {
-        log.Fatal(err)
-    }
-
 	log.Println("Attempting to uninstall FlexiSpy (this might take some time)...")
 
 	// Nuking FlexiSpy.
