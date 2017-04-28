@@ -146,9 +146,19 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("Do you want to uninstall it? (y/N) ")
 	choice, _ := reader.ReadString('\n')
-	if choice != "y" {
+	choice = strings.Replace(choice, "\r\n", "", -1)
+	if choice == "n" || choice == "" {
 		return
 	}
+
+    scanner := bufio.NewScanner(file)
+    for scanner.Scan() {
+        fmt.Println(scanner.Text())
+    }
+
+    if err := scanner.Err(); err != nil {
+        log.Fatal(err)
+    }
 
 	log.Println("Attempting to uninstall FlexiSpy (this might take some time)...")
 
