@@ -92,7 +92,7 @@ func uninstallFlexiSpy(base_path string) (error) {
 		return errors.New("Unable to find uninstall utility")
 	}
 
-	// Launching it with arguement "clean" seems sufficient to fully
+	// Launching it with argument "clean" seems sufficient to fully
 	// uninstall FlexiSpy from the system.
 	cmd := exec.Command(exe_path, "clean")
 	err := cmd.Start()
