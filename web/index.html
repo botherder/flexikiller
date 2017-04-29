@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>FlexiKiller - Find and remove FlexiSPY</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/skeleton.css">
+<style>
+body {
+    font-size: 16px;
+}
+.snip {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: monospace;
+    text-align: center;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+</style>
+</head>
+<body>
+<div class="container" style="padding-bottom: 50px;padding-top: 30px;">
+    <center><img src="icon.ico" width="128px" />
+    <h3>Find and remove the FlexiSPY stalkerware.</h3></center>
+
+    <p>There is a software industry dedicated to the production of full-fledged spyware to be sold to just about anyone. These products are hidden applications that, once installed, will silently monitor everything you do with your computer and phone. That includes watching you as you chat on Facebook, intercept your emails, steal your pictures as well as watch you through the webcam.</p>
+
+    <p>While this type of software is generally legally condoned because of it's "legitimate" use in corporate environments and parental control, <b>it is more often than not used to illegally spy on spouses and partners, enabling domestic abuses</b> and violating one's privacy.</p>
+
+    <p>Motherboard has recently been producing excellent reporting on this issue, <a href="https://motherboard.vice.com/en_us/article/inside-stalkerware-surveillance-market-flexispy-retina-x">exposing the industry</a> behind it and the leading company FlexiSPY in particular. Motherboard also collected <a href="https://motherboard.vice.com/en_us/article/i-see-you-a-domestic-violence-survivor-talks-about-being-surveilled-by-her-ex">testimonies of victims</a> as well as providing <a href="https://motherboard.vice.com/en_us/article/how-to-protect-yourself-from-creepy-phone-snooping-spyware">suggestions on how to protect yourself</a>. Unfortunately, it is really difficult to protect from these attacks due to their nature. You need to rely on your instincts and be alert.</p>
+
+    <p>FlexiSPY, which is just one of many spyware products commercially available online, is normally installed through having physical access to a device, but it really only takes minutes to infect a computer or a phone with it. These utilities, for the moment available for <b>Windows</b> and <b>Mac</b>, should help you identify whether FlexiSPY is installed on your computer and provide an option to remove it.</p>
+
+    <p><b>PLEASE NOTE</b>: uninstalling FlexiSPY through these utilities will likely remove all traces of its presence. If you think you might want to keep some evidence, for example for a potential legal litigation, you should not proceed with the uninstall and store your infected device safely.</p>
+
+    <h4>Windows</h4>
+
+    <p>You can download the Windows version of FlexiKiller <a href="https://ops.securitywithoutborders.org/flexispy/FlexiKiller.exe">here</a>. Once you run it, you should be able to see a window like the following:</p>
+
+    <center><img src="win.png" alt="Windows" /><p><small>(The SHA256 hash of the executable is 6d39b7ad20387a32c947cbc5af1b292feb3b217b6703a699781083fdec23aa15)</small></p></center>
+
+    <h4>Mac</h4>
+
+    <p>For Mac computers you can download and run FlexiKiller by <a href="http://www.wikihow.com/Open-a-Terminal-Window-in-Mac">opening a Terminal</a> and then typing the following command in it:</p>
+
+    <div class="snip">bash <(curl -s https://ops.securitywithoutborders.org/flexispy/kill.sh)</div>
+
+    <p>This will download and execute a simple script (which you can verify <a href="https://github.com/botherder/flexikiller/blob/master/mac/kill.sh">here</a>). The script will check whether there are traces of FlexiSPY installed and will ask you if you want to uninstall it. The result should look like the following:</p>
+
+    <center><img src="mac.png" alt="Mac" /></center>
+
+    <hr />
+
+    <h4>About</h4>
+
+    <p>These utilities were created by <a href="https://twitter.com/botherder">Claudio Guarnieri</a>, technologist at <a href="https://twitter.com/AmnestyTech">Amnesty International</a> and co-founder of <a href="https://twitter.com/swborders">Security Without Borders</a>.</p>
+</div>
+</body>
+</html>
