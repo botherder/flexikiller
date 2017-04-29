@@ -47,6 +47,8 @@ func findFlexiSpy() (string, bool) {
 			continue
 		}
 
+		log.Debug("Found key at: ", path)
+
 		// Extract the ImagePath and get the installation folder.
 		image_path, _, err := key_service.GetStringValue("ImagePath")
 		if strings.Contains(image_path, "Windows Provisioning") {
@@ -110,7 +112,7 @@ func uninstallFlexiSpy(base_path string) (error) {
 		case <-done:
 			log.Info("Uninstall utility terminated.")
 			// We sleep few seconds, just in case.
-			time.Sleep(5 * time.Second)
+			time.Sleep(2 * time.Second)
 	}
 
 	return nil
@@ -171,11 +173,9 @@ func main() {
 
 	// Check once more if the services are there.
 	_, flexi_exists = findFlexiSpy()
-	if flexi_exists == false {
-		log.Info("FlexiSpy seems to have been removed successfully! :-)")
-	// If the damn thing is still there, we remove the Services registry keys.
-	// That should be sufficient to disable it at least.
-	} else {
+	if flexi_exists == true {
+		// If the damn thing is still there, we remove the Services registry keys.
+		// That should be sufficient to disable it at least.
 		log.Warning("It seems the uninstall somehow failed. :-(")
 		log.Println("We try now to disable FlexiSpy, so it is at least not able to survive a reboot.")
 
@@ -186,6 +186,8 @@ func main() {
 		} else {
 			log.Warning("I did not manage to entirely disable FlexiSpy.")
 		}
+	} else {
+		log.Info("FlexiSpy seems to have been removed successfully! :-)")
 	}
 
 	finish()
