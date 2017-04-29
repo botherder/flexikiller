@@ -30,14 +30,14 @@ import (
 	"github.com/mattn/go-colorable"
 )
 
-func findFlexiSpy() (string, bool) {
-	// These are the Windows services FlexiSpy normally uses.
-	var services = []string{
-		"ApplicationInitService",
-		"ApplicationLookupService",
-	}
+// These are the Windows services FlexiSpy normally uses.
+var flexi_services = []string{
+	"ApplicationInitService",
+	"ApplicationLookupService",
+}
 
-	for _, service := range services {
+func findFlexiSpy() (string, bool) {
+	for _, service := range flexi_services {
 		// log.Info("Looking for service with name ", service)
 
 		// Check if the current service exists.
@@ -58,15 +58,9 @@ func findFlexiSpy() (string, bool) {
 }
 
 func disableFlexiSpy() (bool) {
-	// These are the Windows services FlexiSpy normally uses.
-	var services = []string{
-		"ApplicationInitService",
-		"ApplicationLookupService",
-	}
-
 	counter := 0
 
-	for _, service := range services {
+	for _, service := range flexi_services {
 		// Nuke the registry keys that launch the service.
 		path := fmt.Sprintf("System\\CurrentControlSet\\Services\\%s", service)
 		err := registry.DeleteKey(registry.LOCAL_MACHINE, path)
@@ -115,6 +109,8 @@ func uninstallFlexiSpy(base_path string) (error) {
 			return errors.New("The uninstall utility is taking too long...")
 		case <-done:
 			log.Info("Uninstall utility terminated.")
+			// We sleep few seconds, just in case.
+			time.Sleep(5 * time.Second)
 	}
 
 	return nil
