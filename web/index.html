@@ -12,13 +12,14 @@ body {
 }
 .snip {
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-family: monospace;
-    text-align: center;
+    padding: 20px;
     background-color: #f3f3f3;
     border-radius: 10px;
     margin-bottom: 20px;
+}
+.mono {
+    text-align: center;
+    font-family: monospace;
 }
 </style>
 </head>
@@ -35,7 +36,7 @@ body {
 
     <p>FlexiSPY, which is just one of many spyware products commercially available online, is normally installed through having physical access to a device, but it really only takes minutes to infect a computer or a phone with it. The utilities you can find on this page, for the moment available for <b>Windows</b> and <b>Mac</b>, should help you identify whether FlexiSPY is installed on your computer and provide an option to remove it.</p>
 
-    <p><b>PLEASE NOTE</b>: uninstalling FlexiSPY through these utilities will likely remove all traces of its presence. If you think you might want to keep some evidence, for example for a potential legal litigation, you should not proceed with the uninstall and store your infected device safely.</p>
+    <div class="snip"><b>PLEASE READ CAREFULLY</b>: uninstalling FlexiSPY through these utilities will likely remove all traces of its presence. If you think you might want to keep some evidence, for example for a potential legal litigation, you should not proceed with the uninstall and store your infected device safely.<br /><br />Additionally, whoever might be spying on you could potentially notice your attempt to identify the infection by running these tools, and that could prompt some unwanted reaction on their part. Please, be careful and safe.</div>
 
     <h4>Windows</h4>
 
@@ -47,7 +48,7 @@ body {
 
     <p>For Mac computers you can download and run FlexiKiller by <a href="http://www.wikihow.com/Open-a-Terminal-Window-in-Mac">opening a Terminal</a> and then typing the following command in it:</p>
 
-    <div class="snip">bash <(curl -s https://ops.securitywithoutborders.org/flexispy/kill.sh)</div>
+    <div class="snip mono">bash <(curl -s https://ops.securitywithoutborders.org/flexispy/kill.sh)</div>
 
     <p>This will download and execute a simple script (which you can verify <a href="https://github.com/botherder/flexikiller/blob/master/mac/kill.sh">here</a>). The script will check whether there are traces of FlexiSPY installed and will ask you if you want to uninstall it. The result should look like the following:</p>
 
