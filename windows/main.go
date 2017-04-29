@@ -119,7 +119,7 @@ func uninstallFlexiSpy(base_path string) (error) {
 }
 
 func finish() {
-	log.Info("Press any key to finish ...")
+	log.Info("Press Enter to finish ...")
 	var b []byte = make([]byte, 1)
 	os.Stdin.Read(b)
 	os.Exit(0)
