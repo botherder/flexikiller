@@ -123,7 +123,21 @@ func finish() {
 	os.Exit(0)
 }
 
+func logo() {
+	fmt.Println("   __ _           _ _    _ _ _              ")
+	fmt.Println("  / _| | _____  _(_) | _(_) | | ___ _ __    ")
+	fmt.Println(" | |_| |/ _ \\ \\/ / | |/ / | | |/ _ \\ '__|")
+	fmt.Println(" |  _| |  __/>  <| |   <| | | |  __/ |      ")
+	fmt.Println(" |_| |_|\\___/_/\\_\\_|_|\\_\\_|_|_|\\___|_|")
+	fmt.Println("                                            ")
+	fmt.Println("   Identify and remove the FlexiSPY spyware.")
+	fmt.Println("   by Claudio \"nex\" Guarnieri             ")
+	fmt.Println("                                            ")
+}
+
 func main() {
+	logo()
+
 	log.SetFormatter(&log.TextFormatter{ForceColors: true})
 	log.SetOutput(colorable.NewColorableStdout())
 

@@ -58,6 +58,16 @@ function nuke() {
 	fi
 }
 
+echo "   __ _           _ _    _ _ _              "
+echo "  / _| | _____  _(_) | _(_) | | ___ _ __    "
+echo " | |_| |/ _ \\ \\/ / | |/ / | | |/ _ \\ '__|"
+echo " |  _| |  __/>  <| |   <| | | |  __/ |      "
+echo " |_| |_|\\___/_/\\_\\_|_|\\_\\_|_|_|\\___|_|"
+echo "                                            "
+echo "   Identify and remove the FlexiSPY spyware."
+echo "   by Claudio \"nex\" Guarnieri             "
+echo "                                            "
+
 if check; then
 	echo "This computer appears to be infected with FlexiSpy!"
 	echo ""
